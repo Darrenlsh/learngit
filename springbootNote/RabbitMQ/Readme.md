@@ -1,15 +1,15 @@
 # RabbitMQ 学习总结
 >@author luosihao
 
-1. [安装Erlang](安装Erlang)
-2. [安装RabbitMQ](安装RabbitMQ)
-3. [RabbitMQ介绍](RabbitMQ介绍)
- - [相关概念](相关概念)
- - [交换机](交换机)
-4. [springboot集成RabbitMQ](springboot集成RabbitMQ)
- - [简单使用](简单使用)
- - [多对多使用](多对多使用)
- - [高级使用](高级使用)
+1. [安装Erlang](#安装Erlang)
+2. [安装RabbitMQ](#安装RabbitMQ)
+3. [RabbitMQ介绍](#RabbitMQ介绍)
+ - [相关概念](#相关概念)
+ - [交换机](#交换机)
+4. [springboot集成RabbitMQ](#springboot集成RabbitMQ)
+ - [简单使用](#简单使用)
+ - [多对多使用](#多对多使用)
+ - [高级使用](#高级使用)
 
 
 ### 安装Erlang
