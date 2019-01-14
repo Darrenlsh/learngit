@@ -1,0 +1,19 @@
+01.03  罗嗣浩
+工作小结：
+任务安排：无
+完成状况：修改了工作委托修改接口的委托时间方面的Bug（委托开始后，委托时间不允许修改）。学习系统自动分配-任务池接口的代码。
+
+
+
+select top 100 * from Gungnir.dbo.ShouQianWorkOrderTask;
+select top 100 * from Tuhu_oa.dbo.TaskPoolConfig;
+select top 100 * from Tuhu_oa.dbo.WorkOrderProcessInstance;
+select top 100 * from Tuhu_oa.dbo.WorkOrderProcessConfig;
+
+select top 100 * from Tuhu_oa.dbo.WorkOrderDelegateConfig;
+
+select * from  Gungnir..ShouHouTaskConfigInfo;
+
+update Tuhu_oa.dbo.WorkOrderDelegateConfig set DelegateType = '127' where pkid=28;   
+
+select top 1 * from Tuhu_oa..WorkOrderAppSessionInfo where UserEmail=N'luohaiyan@tuhu.cn';
