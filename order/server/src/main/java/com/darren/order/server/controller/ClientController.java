@@ -1,6 +1,6 @@
 package com.darren.order.server.controller;
 
-import com.darren.order.client.ProductClient;
+import com.darrren.product.client.ProductClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,12 +23,12 @@ public class ClientController {
 //    @Autowired
 //    private LoadBalancerClient loadBalancerClient;
 
-    @GetMapping("/testProductServer")
-    public String testProductServer(){
-        String response = productClient.productMsg();
-        log.info("response = {},status = {}",response,response);
-        return response;
-    }
+//    @GetMapping("/testProductServer")
+//    public String testProductServer(){
+//        String response = productClient.productMsg();
+//        log.info("response = {},status = {}",response,response);
+//        return response;
+//    }
 
     @GetMapping("/testRestTemplate")
     public String testRestTemplate(){

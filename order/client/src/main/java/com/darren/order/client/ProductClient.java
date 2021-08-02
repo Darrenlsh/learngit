@@ -16,12 +16,12 @@ import java.util.List;
  */
 //@FeignClient(name = "product")
 public interface ProductClient {
-    @GetMapping("/msg")
-    String productMsg();
-
-    @PostMapping("/product/listForOrder")
-    List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList);
-
-    @PostMapping("/product/decreaseStock")
-    void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList);
+//    @GetMapping("/msg")
+//    String productMsg();
+//
+//    @PostMapping("/product/listForOrder")
+//    List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList);
+//
+//    @PostMapping("/product/decreaseStock")
+//    void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList);
 }

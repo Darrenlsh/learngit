@@ -1,8 +1,5 @@
 package com.darren.order.server.service.impl;
 
-import com.darren.order.client.ProductClient;
-import com.darren.order.common.DecreaseStockInput;
-import com.darren.order.common.ProductInfoOutput;
 import com.darren.order.server.dataobject.OrderDetail;
 import com.darren.order.server.dataobject.OrderMaster;
 import com.darren.order.server.dto.OrderDTO;
@@ -12,6 +9,9 @@ import com.darren.order.server.repository.OrderDetailRepository;
 import com.darren.order.server.repository.OrderMasterRepository;
 import com.darren.order.server.service.OrderService;
 import com.darren.order.server.utils.KeyUtil;
+import com.darren.product.common.DecreaseStockInput;
+import com.darren.product.common.ProductInfoOutput;
+import com.darrren.product.client.ProductClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -79,9 +79,8 @@ public class OrderServiceImpl implements OrderService {
         productClient.decreaseStock(decreaseStockInputList);
         // 5. 订单入库
         OrderMaster orderMaster = new OrderMaster();
+        orderDTO.setOrderId(orderId);
         BeanUtils.copyProperties(orderDTO, orderMaster);
-        // id设置需要在BeanUtils.copyProperties之后，不然id会被重新置空
-        orderMaster.setOrderId(orderId);
         orderMaster.setOrderAmount(orderAmount);
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());

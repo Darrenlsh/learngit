@@ -59,7 +59,11 @@
         </dependency>
         <dependency>
             <groupId>com.darren</groupId>
-            <artifactId>order-client</artifactId>
+            <artifactId>product-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>org.junit.jupiter</groupId>-->
